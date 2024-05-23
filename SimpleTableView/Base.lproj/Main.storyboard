@@ -345,14 +345,14 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoppingCell" id="VeS-cE-dYR" customClass="ShoppingTableViewCell" customModule="SimpleTableView" customModuleProvider="target">
-                                <rect key="frame" x="20" y="163.33333206176758" width="353" height="56"/>
+                                <rect key="frame" x="20" y="163.33333206176758" width="353" height="44.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VeS-cE-dYR" id="2o0-Ew-7Zq">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="44.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tR-q3-vCU">
-                                            <rect key="frame" x="20" y="11" width="30.333333333333329" height="35"/>
+                                            <rect key="frame" x="20" y="5" width="30" height="34.666666666666664"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="30" id="adM-x3-bd2"/>
                                                 <constraint firstAttribute="width" secondItem="3tR-q3-vCU" secondAttribute="height" multiplier="19:22" id="fiN-Ob-oCl"/>
@@ -362,7 +362,7 @@
                                             <state key="normal" image="checkmark.square" catalog="system"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwZ-6z-MMR">
-                                            <rect key="frame" x="303" y="11" width="30" height="31"/>
+                                            <rect key="frame" x="303" y="5" width="30" height="31"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="KwZ-6z-MMR" secondAttribute="height" multiplier="27:28" id="8YY-LL-DTd"/>
                                                 <constraint firstAttribute="width" constant="30" id="jka-LC-Iav"/>
@@ -372,7 +372,7 @@
                                             <state key="normal" image="star" catalog="system"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="텍스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oh-zc-kXv">
-                                            <rect key="frame" x="70.333333333333329" y="18" width="212.66666666666669" height="21"/>
+                                            <rect key="frame" x="70" y="12" width="213" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -380,12 +380,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="4oh-zc-kXv" firstAttribute="leading" secondItem="3tR-q3-vCU" secondAttribute="trailing" constant="20" id="1f9-5A-ymR"/>
+                                        <constraint firstItem="3tR-q3-vCU" firstAttribute="centerY" secondItem="2o0-Ew-7Zq" secondAttribute="centerY" id="1jw-bG-nYh"/>
                                         <constraint firstAttribute="trailing" secondItem="KwZ-6z-MMR" secondAttribute="trailing" constant="20" symbolic="YES" id="DYj-vX-eFj"/>
                                         <constraint firstItem="3tR-q3-vCU" firstAttribute="leading" secondItem="2o0-Ew-7Zq" secondAttribute="leading" constant="20" symbolic="YES" id="JCa-il-dNp"/>
                                         <constraint firstItem="4oh-zc-kXv" firstAttribute="centerY" secondItem="3tR-q3-vCU" secondAttribute="centerY" id="P8L-Hw-G0o"/>
-                                        <constraint firstItem="3tR-q3-vCU" firstAttribute="top" secondItem="2o0-Ew-7Zq" secondAttribute="top" constant="11" id="d3n-Fk-kPH"/>
                                         <constraint firstItem="4oh-zc-kXv" firstAttribute="trailing" secondItem="KwZ-6z-MMR" secondAttribute="leading" constant="-20" id="eDs-19-NGa"/>
-                                        <constraint firstAttribute="bottom" secondItem="3tR-q3-vCU" secondAttribute="bottom" constant="10" id="lu2-q7-AQh"/>
                                         <constraint firstItem="KwZ-6z-MMR" firstAttribute="top" secondItem="3tR-q3-vCU" secondAttribute="top" id="xM7-KH-A0g"/>
                                     </constraints>
                                 </tableViewCellContentView>
