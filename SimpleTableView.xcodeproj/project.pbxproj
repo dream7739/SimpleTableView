@@ -18,6 +18,7 @@
 		88AFE87C2BFF319C00C8E9BB /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AFE87B2BFF319C00C8E9BB /* ShoppingTableViewController.swift */; };
 		88CCCCC62BFF58F8006FE4B8 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCCCC52BFF58F8006FE4B8 /* ShoppingTableViewCell.swift */; };
 		88CCCCC82BFF6A4C006FE4B8 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCCCC72BFF6A4C006FE4B8 /* UIViewController + Extension.swift */; };
+		88CCCCCB2BFF7BB1006FE4B8 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCCCCA2BFF7BB1006FE4B8 /* UserDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		88AFE87B2BFF319C00C8E9BB /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		88CCCCC52BFF58F8006FE4B8 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		88CCCCC72BFF6A4C006FE4B8 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		88CCCCCA2BFF7BB1006FE4B8 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				88AFE8792BFF2E4A00C8E9BB /* SettingTableViewController.swift */,
 				88AFE87B2BFF319C00C8E9BB /* ShoppingTableViewController.swift */,
 				88CCCCC52BFF58F8006FE4B8 /* ShoppingTableViewCell.swift */,
+				88CCCCCA2BFF7BB1006FE4B8 /* UserDefault.swift */,
 			);
 			path = SimpleTableView;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				88CCCCC82BFF6A4C006FE4B8 /* UIViewController + Extension.swift in Sources */,
 				88AFE8662BFF243800C8E9BB /* ViewController.swift in Sources */,
 				88AFE8622BFF243800C8E9BB /* AppDelegate.swift in Sources */,
+				88CCCCCB2BFF7BB1006FE4B8 /* UserDefault.swift in Sources */,
 				88AFE8642BFF243800C8E9BB /* SceneDelegate.swift in Sources */,
 				88CCCCC62BFF58F8006FE4B8 /* ShoppingTableViewCell.swift in Sources */,
 				88AFE87A2BFF2E4A00C8E9BB /* SettingTableViewController.swift in Sources */,

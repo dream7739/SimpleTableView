@@ -22,6 +22,7 @@ class ShoppingTableViewController: UITableViewController {
         productTextField.leftView = emptyView
         productTextField.leftViewMode = .always
         
+        shoppingList = ProductManager.productList
     }
     
     @IBAction func clickAddButton(_ sender: UIButton) {
@@ -29,6 +30,7 @@ class ShoppingTableViewController: UITableViewController {
         
         if productText != "" {
             shoppingList.append(productTextField.text!)
+            ProductManager.productList = shoppingList
             tableView.reloadData()
         }else{
             showAlert(t: "알림", msg: "물품 정보를 입력해주세요", style: .alert)
