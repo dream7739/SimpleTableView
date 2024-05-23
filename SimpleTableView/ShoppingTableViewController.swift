@@ -30,6 +30,8 @@ class ShoppingTableViewController: UITableViewController {
         if productText != "" {
             shoppingList.append(productTextField.text!)
             tableView.reloadData()
+        }else{
+            showAlert(t: "알림", msg: "물품 정보를 입력해주세요", style: .alert)
         }
        
     }
