@@ -16,6 +16,7 @@
 		88AFE8782BFF262E00C8E9BB /* ConcentrateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AFE8772BFF262E00C8E9BB /* ConcentrateTableViewController.swift */; };
 		88AFE87A2BFF2E4A00C8E9BB /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AFE8792BFF2E4A00C8E9BB /* SettingTableViewController.swift */; };
 		88AFE87C2BFF319C00C8E9BB /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AFE87B2BFF319C00C8E9BB /* ShoppingTableViewController.swift */; };
+		88CCCCC62BFF58F8006FE4B8 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CCCCC52BFF58F8006FE4B8 /* ShoppingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		88AFE8772BFF262E00C8E9BB /* ConcentrateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrateTableViewController.swift; sourceTree = "<group>"; };
 		88AFE8792BFF2E4A00C8E9BB /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		88AFE87B2BFF319C00C8E9BB /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		88CCCCC52BFF58F8006FE4B8 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				88AFE8772BFF262E00C8E9BB /* ConcentrateTableViewController.swift */,
 				88AFE8792BFF2E4A00C8E9BB /* SettingTableViewController.swift */,
 				88AFE87B2BFF319C00C8E9BB /* ShoppingTableViewController.swift */,
+				88CCCCC52BFF58F8006FE4B8 /* ShoppingTableViewCell.swift */,
 			);
 			path = SimpleTableView;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				88AFE8662BFF243800C8E9BB /* ViewController.swift in Sources */,
 				88AFE8622BFF243800C8E9BB /* AppDelegate.swift in Sources */,
 				88AFE8642BFF243800C8E9BB /* SceneDelegate.swift in Sources */,
+				88CCCCC62BFF58F8006FE4B8 /* ShoppingTableViewCell.swift in Sources */,
 				88AFE87A2BFF2E4A00C8E9BB /* SettingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
