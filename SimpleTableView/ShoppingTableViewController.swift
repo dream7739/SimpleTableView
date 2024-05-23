@@ -12,6 +12,7 @@ class ShoppingTableViewController: UITableViewController {
     @IBOutlet var productTextField: UITextField!
     @IBOutlet var addButton: UIButton!
     private var shoppingList: [String] = []
+    private lazy var checkList: [Int: Bool] = [ : ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +48,30 @@ class ShoppingTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCell") as? ShoppingTableViewCell else { return UITableViewCell() }
+        cell.delegate = self
+        cell.index = indexPath.row
+        
+        
+        if let isChecked = checkList[indexPath.row] {
+            if isChecked {
+                cell.isCheckboxClicked = true
+            }else {
+                cell.isCheckboxClicked = false
+            }
+        }else {
+            cell.isCheckboxClicked = false
+        }
+        
         cell.productLabel?.text = shoppingList[indexPath.row]
         return cell
     }
+    
+}
+
+extension ShoppingTableViewController : ShoppingDelegate {
+    func checkBoxClicked(idx: Int, isClicked: Bool) {
+        checkList[idx] = isClicked
+    }
+    
     
 }

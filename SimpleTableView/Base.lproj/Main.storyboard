@@ -360,6 +360,9 @@
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="checkmark.square" catalog="system"/>
+                                            <connections>
+                                                <action selector="checkboxClicked:" destination="VeS-cE-dYR" eventType="touchUpInside" id="f9J-pb-ZPF"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwZ-6z-MMR">
                                             <rect key="frame" x="303" y="5" width="30" height="31"/>
@@ -390,6 +393,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.61021695669999998" green="0.60203735189999996" blue="0.66114267680000005" alpha="0.1036579056" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
+                                    <outlet property="checkboxButton" destination="3tR-q3-vCU" id="d4d-85-dvm"/>
                                     <outlet property="productLabel" destination="4oh-zc-kXv" id="Lbx-Rj-PHs"/>
                                 </connections>
                             </tableViewCell>
