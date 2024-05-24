@@ -8,6 +8,7 @@
 import UIKit
 
 class ShoppingTableViewCell: UITableViewCell {
+    @IBOutlet var productBackgroundView: UIView!
     @IBOutlet var productLabel: UILabel!
     @IBOutlet var checkboxButton: UIButton!
     @IBOutlet var bookmarkButton: UIButton!

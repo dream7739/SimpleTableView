@@ -20,7 +20,7 @@ class ShoppingTableViewController: UITableViewController {
         designButton(addButton)
         designTextField(productTextField)
         
-        tableView.rowHeight = 50
+        tableView.rowHeight = 65
     }
     
     @IBAction func clickAddButton(_ sender: UIButton) {
@@ -68,6 +68,7 @@ class ShoppingTableViewController: UITableViewController {
         
         let data = shoppingList[indexPath.row]
 
+        cell.productBackgroundView.layer.cornerRadius = 10
         cell.productLabel.text = data.productName
 
         cell.bookmarkButton.tag = indexPath.row
