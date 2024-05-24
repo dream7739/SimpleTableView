@@ -36,7 +36,7 @@ class ShoppingTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    @objc func isBookmarkClicked(sender: UIButton){
+    @objc  func isBookmarkClicked(sender: UIButton){
         shoppingList[sender.tag].isBookmarked.toggle()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
@@ -46,12 +46,11 @@ class ShoppingTableViewController: UITableViewController {
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
-    func designButton(_ sender : UIButton){
+    private func designButton(_ sender : UIButton){
         sender.layer.cornerRadius = 10
-
     }
     
-    func designTextField(_ sender : UITextField){
+    private func designTextField(_ sender : UITextField){
         sender.layer.cornerRadius = 10
         let emptyView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 60))
         sender.leftView = emptyView
@@ -61,7 +60,18 @@ class ShoppingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shoppingList.count
     }
-
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            shoppingList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //custom cell, indexPatht설정하는 dequeueReusableCell for 사용
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell", for: indexPath) as! ShoppingTableViewCell
