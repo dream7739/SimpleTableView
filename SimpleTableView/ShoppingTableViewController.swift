@@ -20,7 +20,6 @@ class ShoppingTableViewController: UITableViewController {
         designButton(addButton)
         designTextField(productTextField)
         
-        tableView.rowHeight = 65
     }
     
     @IBAction func clickAddButton(_ sender: UIButton) {
@@ -36,7 +35,7 @@ class ShoppingTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    @objc  func isBookmarkClicked(sender: UIButton){
+    @objc func isBookmarkClicked(sender: UIButton){
         shoppingList[sender.tag].isBookmarked.toggle()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
@@ -58,41 +57,70 @@ class ShoppingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shoppingList.count
+        print(#function)
+        
+        if shoppingList.isEmpty {
+            return 1
+        }else{
+            return shoppingList.count
+        }
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print(#function)
+        
+        if shoppingList.isEmpty {
+            return 400
+        }else{
+            return 65
+        }
+    }
+    
+    //EditingStyle을 지정. (.insert, .delete, .none)
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
+        print(#function)
+        return shoppingList.isEmpty ? .none : .delete
     }
     
+    //dataSource에서 특정 행의 삽입, 삭제를 반영하도록 요청
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        print(#function)
+        
         if editingStyle == .delete {
             shoppingList.remove(at: indexPath.row)
-            tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
+            tableView.reloadData()
+            // deleteRows - cellForRowAt호출안됨
+            // 기존에 데이터가 있을 때는 잘 삭제 되다가 데이터가 없을 때 셀을 바꿔야하는데 여기서 문제가 생김
+            // reloadData로 실행하면 cellForRowAt에 실행
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //custom cell, indexPatht설정하는 dequeueReusableCell for 사용
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell", for: indexPath) as! ShoppingTableViewCell
-        
-        let data = shoppingList[indexPath.row]
-
-        cell.productBackgroundView.layer.cornerRadius = 10
-        cell.productLabel.text = data.productName
-
-        cell.bookmarkButton.tag = indexPath.row
-        cell.bookmarkButton.addTarget(self, action: #selector(isBookmarkClicked), for: .touchUpInside)
-        let bookmarkImage = data.isBookmarked ? "star.fill" : "star"
-        cell.bookmarkButton.setImage(UIImage(systemName: bookmarkImage), for: .normal)
-        
-        cell.checkboxButton.tag = indexPath.row
-        cell.checkboxButton.addTarget(self, action: #selector(isCheckboxClicked), for: .touchUpInside)
-        let checkboxImage = data.isChecked ? "checkmark.square.fill" : "checkmark.square"
-        cell.checkboxButton.setImage(UIImage(systemName: checkboxImage), for: .normal)
-
-        return cell
+        //custom cell, indexPatht설정하는 dequeueReusableaCell for 사용
+        print(#function)
+        if shoppingList.isEmpty {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyTableViewCell", for: indexPath) as! EmptyTableViewCell
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell", for: indexPath) as! ShoppingTableViewCell
+            
+            let data = shoppingList[indexPath.row]
+            
+            cell.productBackgroundView.layer.cornerRadius = 10
+            cell.productLabel.text = data.productName
+            
+            cell.bookmarkButton.tag = indexPath.row
+            cell.bookmarkButton.addTarget(self, action: #selector(isBookmarkClicked), for: .touchUpInside)
+            let bookmarkImage = data.isBookmarked ? "star.fill" : "star"
+            cell.bookmarkButton.setImage(UIImage(systemName: bookmarkImage), for: .normal)
+            
+            cell.checkboxButton.tag = indexPath.row
+            cell.checkboxButton.addTarget(self, action: #selector(isCheckboxClicked), for: .touchUpInside)
+            let checkboxImage = data.isChecked ? "checkmark.square.fill" : "checkmark.square"
+            cell.checkboxButton.setImage(UIImage(systemName: checkboxImage), for: .normal)
+            
+            return cell
+        }
     }
-    
 }
 

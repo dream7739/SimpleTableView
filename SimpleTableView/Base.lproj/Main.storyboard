@@ -411,6 +411,57 @@
                                     <outlet property="productLabel" destination="4oh-zc-kXv" id="Lbx-Rj-PHs"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmptyTableViewCell" rowHeight="400" id="OAQ-gG-trn" customClass="EmptyTableViewCell" customModule="SimpleTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="228.33333206176758" width="393" height="400"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OAQ-gG-trn" id="g8I-01-4Q2">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매할 물품을 담아주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DO-dD-HtG">
+                                            <rect key="frame" x="97" y="347.66666666666669" width="199" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XRB-PB-GgQ">
+                                            <rect key="frame" x="63" y="346.66666666666669" width="30" height="27"/>
+                                            <color key="tintColor" systemColor="systemPinkColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="XRB-PB-GgQ" secondAttribute="height" id="16I-1h-uUN"/>
+                                                <constraint firstAttribute="width" constant="30" id="QPP-yi-HBb"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FGi-5A-MXy">
+                                            <rect key="frame" x="300" y="346.66666666666669" width="30" height="27"/>
+                                            <color key="tintColor" systemColor="systemPinkColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="JCz-rX-pTz"/>
+                                                <constraint firstAttribute="width" secondItem="FGi-5A-MXy" secondAttribute="height" id="g9k-VB-FQs"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rupy" translatesAutoresizingMaskIntoConstraints="NO" id="rFH-Pe-Ixo">
+                                            <rect key="frame" x="59" y="52.333333333333343" width="275" height="275.33333333333326"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="rFH-Pe-Ixo" secondAttribute="height" multiplier="1:1" id="RkX-bP-WOU"/>
+                                                <constraint firstAttribute="width" constant="186" id="X03-tW-06x"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rFH-Pe-Ixo" firstAttribute="centerX" secondItem="g8I-01-4Q2" secondAttribute="centerX" id="9lU-hW-sif"/>
+                                        <constraint firstItem="XRB-PB-GgQ" firstAttribute="centerY" secondItem="5DO-dD-HtG" secondAttribute="centerY" id="AVJ-Bw-bVu"/>
+                                        <constraint firstItem="5DO-dD-HtG" firstAttribute="top" secondItem="rFH-Pe-Ixo" secondAttribute="bottom" constant="20" id="DyK-WN-bh4"/>
+                                        <constraint firstItem="5DO-dD-HtG" firstAttribute="leading" secondItem="XRB-PB-GgQ" secondAttribute="trailing" constant="4" id="EQk-LP-Fyh"/>
+                                        <constraint firstItem="FGi-5A-MXy" firstAttribute="centerY" secondItem="5DO-dD-HtG" secondAttribute="centerY" id="Ffw-rN-mI3"/>
+                                        <constraint firstItem="FGi-5A-MXy" firstAttribute="leading" secondItem="5DO-dD-HtG" secondAttribute="trailing" constant="4" id="HDU-2V-bQc"/>
+                                        <constraint firstItem="5DO-dD-HtG" firstAttribute="centerX" secondItem="rFH-Pe-Ixo" secondAttribute="centerX" id="Vq4-VD-xe8"/>
+                                        <constraint firstItem="rFH-Pe-Ixo" firstAttribute="width" secondItem="g8I-01-4Q2" secondAttribute="width" multiplier="0.7" id="bV6-hY-PCE"/>
+                                        <constraint firstItem="rFH-Pe-Ixo" firstAttribute="centerY" secondItem="g8I-01-4Q2" secondAttribute="centerY" constant="-10" id="ypx-4j-GaT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="eSv-Cn-7An" id="dg5-ea-Rck"/>
@@ -431,8 +482,10 @@
     <resources>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="moon.fill" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="rupy" width="432" height="556"/>
         <image name="square.topthird.inset.filled" catalog="system" width="128" height="114"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
@@ -442,7 +495,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
