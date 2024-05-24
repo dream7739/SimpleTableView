@@ -344,7 +344,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoppingCell" id="VeS-cE-dYR" customClass="ShoppingTableViewCell" customModule="SimpleTableView" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingTableViewCell" id="VeS-cE-dYR" customClass="ShoppingTableViewCell" customModule="SimpleTableView" customModuleProvider="target">
                                 <rect key="frame" x="20" y="163.33333206176758" width="353" height="44.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VeS-cE-dYR" id="2o0-Ew-7Zq">
@@ -360,9 +360,6 @@
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="checkmark.square" catalog="system"/>
-                                            <connections>
-                                                <action selector="checkboxClicked:" destination="VeS-cE-dYR" eventType="touchUpInside" id="f9J-pb-ZPF"/>
-                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwZ-6z-MMR">
                                             <rect key="frame" x="303" y="5" width="30" height="31"/>
@@ -393,6 +390,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.61021695669999998" green="0.60203735189999996" blue="0.66114267680000005" alpha="0.1036579056" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
+                                    <outlet property="bookmarkButton" destination="KwZ-6z-MMR" id="sNI-oM-8wF"/>
                                     <outlet property="checkboxButton" destination="3tR-q3-vCU" id="d4d-85-dvm"/>
                                     <outlet property="productLabel" destination="4oh-zc-kXv" id="Lbx-Rj-PHs"/>
                                 </connections>

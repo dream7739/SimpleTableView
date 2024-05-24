@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88397D6E2C00AEDE0006C43A /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88397D6D2C00AEDE0006C43A /* Shopping.swift */; };
 		88AFE8622BFF243800C8E9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AFE8612BFF243800C8E9BB /* AppDelegate.swift */; };
 		88AFE8642BFF243800C8E9BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AFE8632BFF243800C8E9BB /* SceneDelegate.swift */; };
 		88AFE8662BFF243800C8E9BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AFE8652BFF243800C8E9BB /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88397D6D2C00AEDE0006C43A /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
 		88AFE85E2BFF243800C8E9BB /* SimpleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AFE8612BFF243800C8E9BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88AFE8632BFF243800C8E9BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				88AFE87B2BFF319C00C8E9BB /* ShoppingTableViewController.swift */,
 				88CCCCC52BFF58F8006FE4B8 /* ShoppingTableViewCell.swift */,
 				88CCCCCA2BFF7BB1006FE4B8 /* UserDefault.swift */,
+				88397D6D2C00AEDE0006C43A /* Shopping.swift */,
 			);
 			path = SimpleTableView;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				88AFE8642BFF243800C8E9BB /* SceneDelegate.swift in Sources */,
 				88CCCCC62BFF58F8006FE4B8 /* ShoppingTableViewCell.swift in Sources */,
 				88AFE87A2BFF2E4A00C8E9BB /* SettingTableViewController.swift in Sources */,
+				88397D6E2C00AEDE0006C43A /* Shopping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
