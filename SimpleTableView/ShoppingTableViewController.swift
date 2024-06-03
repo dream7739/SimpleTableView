@@ -37,11 +37,14 @@ class ShoppingTableViewController: UITableViewController {
     
     @objc func isBookmarkClicked(sender: UIButton){
         shoppingList[sender.tag].isBookmarked.toggle()
+        print(#function, sender.tag)
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
     @objc func isCheckboxClicked(sender: UIButton){
         shoppingList[sender.tag].isChecked.toggle()
+        print(#function, sender.tag)
+
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
@@ -57,7 +60,6 @@ class ShoppingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(#function)
         
         if shoppingList.isEmpty {
             return 1
@@ -67,7 +69,6 @@ class ShoppingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print(#function)
         
         if shoppingList.isEmpty {
             return 400
@@ -78,13 +79,11 @@ class ShoppingTableViewController: UITableViewController {
     
     //EditingStyle을 지정. (.insert, .delete, .none)
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        print(#function)
         return shoppingList.isEmpty ? .none : .delete
     }
     
     //dataSource에서 특정 행의 삽입, 삭제를 반영하도록 요청
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        print(#function)
         
         if editingStyle == .delete {
             shoppingList.remove(at: indexPath.row)
@@ -97,7 +96,6 @@ class ShoppingTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //custom cell, indexPatht설정하는 dequeueReusableaCell for 사용
-        print(#function)
         if shoppingList.isEmpty {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EmptyTableViewCell", for: indexPath) as! EmptyTableViewCell
             return cell
@@ -118,6 +116,7 @@ class ShoppingTableViewController: UITableViewController {
             cell.checkboxButton.addTarget(self, action: #selector(isCheckboxClicked), for: .touchUpInside)
             let checkboxImage = data.isChecked ? "checkmark.square.fill" : "checkmark.square"
             cell.checkboxButton.setImage(UIImage(systemName: checkboxImage), for: .normal)
+            
             
             return cell
         }
